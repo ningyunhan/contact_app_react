@@ -1,0 +1,1 @@
+This is an react app where you can manage your contact list.
