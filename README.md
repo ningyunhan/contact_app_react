@@ -1,1 +1,1 @@
-This is an react app where you can manage your contact list.
+This is an react app where you can manage your contact list by Yunhan Ning
