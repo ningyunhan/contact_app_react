@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 //const imgUrl="http://coding-robin.de/images/pictures/opencv_positive_cropped_scaled_01.jpg"
-
+import PropTypes from  'prop-types'
 class ListContacts extends Component{
 	render(){
 		//console.log(typeof(this.props.contacts[0].avatarURL))
@@ -25,4 +25,9 @@ class ListContacts extends Component{
 	}
 }
 
+
+ListContacts.propTypes = {
+	contacts: PropTypes.array.isRequired,
+	onDeleteContact: PropTypes.func.isRequired
+}
 export default ListContacts
