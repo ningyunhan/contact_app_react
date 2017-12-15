@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import ListContacts from './ListContacts'
 import * as ContactsAPI from './utils/ContactsAPI'
+import CreateContact from './CreateContact.js'
+
+
 
 class App extends Component {
   state = {
@@ -25,6 +28,7 @@ class App extends Component {
     return (
       <div>
         <ListContacts onDeleteContact={this.removeContact} contacts={this.state.contacts}/>
+        <CreateContact/>
       </div>
     )
   }
