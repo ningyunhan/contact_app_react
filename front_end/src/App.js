@@ -7,6 +7,7 @@ import CreateContact from './CreateContact.js'
 
 class App extends Component {
   state = {
+    screen:'list',
     contacts :[]
   }
 
@@ -27,8 +28,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <ListContacts onDeleteContact={this.removeContact} contacts={this.state.contacts}/>
-        <CreateContact/>
+        {this.state.screen === 'list' && 
+          (<ListContacts onDeleteContact={this.removeContact} contacts={this.state.contacts}/>)
+        }
+        {this.state.screen === 'create' && 
+          <CreateContact/>
+        }
       </div>
     )
   }
