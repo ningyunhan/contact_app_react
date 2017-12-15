@@ -7,6 +7,7 @@ import CreateContact from './CreateContact.js'
 
 class App extends Component {
   state = {
+    screen: 'list',
     contacts :[]
   }
 
@@ -24,11 +25,25 @@ class App extends Component {
     ContactsAPI.remove(contact)
   }
 
+  onNavigateTocreate = () => {
+    this.setState({
+      screen: 'create'
+    });
+  }
+
   render() {
     return (
       <div>
-        <ListContacts onDeleteContact={this.removeContact} contacts={this.state.contacts}/>
-        <CreateContact/>
+        {this.state.screen === 'list' && 
+          <ListContacts 
+            onDeleteContact={this.removeContact} 
+            contacts={this.state.contacts} 
+            onNavigate={this.onNavigateTocreate}/>
+        }
+
+        {this.state.screen === 'create' &&
+          <CreateContact/>
+        }
       </div>
     )
   }
