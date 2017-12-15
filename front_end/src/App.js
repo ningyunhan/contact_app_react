@@ -31,6 +31,12 @@ class App extends Component {
     });
   }
 
+  onNavigateToList = () => {
+    this.setState({
+      screen: 'list'
+    });
+  }
+
   render() {
     return (
       <div>
@@ -44,6 +50,7 @@ class App extends Component {
         {this.state.screen === 'create' &&
           <CreateContact/>
         }
+        <button onClick={this.onNavigateToList}>Back to List</button>
       </div>
     )
   }
