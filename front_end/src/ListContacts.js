@@ -3,6 +3,7 @@ import React, {Component} from 'react'
 import PropTypes from  'prop-types'
 import escapeRegExp from 'escape-string-regexp'
 import sortBy from 'sort-by'
+import {Link} from 'react-router-dom'
 
 class ListContacts extends Component{
 
@@ -43,12 +44,11 @@ class ListContacts extends Component{
 						value={this.state.query}
 						onChange={(event) => this.updateQuery(event.target.value)}
 					/>
-					<a
-						href="#"
-						onClick={this.props.onNavigate}
+					<Link
+						to="/Create"
 						className='add-contact'
 					>Add Contact
-					</a>
+					</Link>
 				</div>
 
 				{showingContacts.length !== contacts.length && <div className='showing-contacts'>
