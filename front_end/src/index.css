@@ -72,7 +72,20 @@ body, .app {
   font-size: inherit;
   border: none;
   outline: 0;
+  cursor:pointer;
 }
+
+.create-contact-details button:active {
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: inherit;
+  border: none;
+  outline: 0;
+  cursor:pointer;
+}
+
 
 /* ListContacts */
 
